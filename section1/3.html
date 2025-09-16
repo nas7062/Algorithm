@@ -1,22 +1,17 @@
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>출력결과</title>
-  </head>
-  <body>
-    <script>
-      function solution(arr) {
-        let answer;
-        let min = Number.MAX_SAFE_INTEGER;
-        for (let i = 0; i < arr.length; i++) {
-          min = Math.min(arr[i], min);
-        }
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과</title>
+    </head>
+    <body>
+        <script>
+            function solution(n){
+                let answer;
+                answer=Math.ceil(n/12);
+                return answer;
+            }
 
-        return min;
-      }
-
-      let arr = [5, 7, 8, 3, 2, 9, 11];
-      console.log(solution(arr));
-    </script>
-  </body>
+            console.log(solution(178));
+        </script>
+    </body>
 </html>
