@@ -5,13 +5,15 @@
   </head>
   <body>
     <script>
-      function solution(a, b, c) {
-        let answer;
-        answer = Math.ceil(n / 12);
+      function solution(n) {
+        let answer = 0;
+        for (let i = 1; i <= n; i++) {
+          answer += i;
+        }
         return answer;
       }
 
-      console.log(solution(178));
+      console.log(solution(10));
     </script>
   </body>
 </html>
