@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      function solution(s, t) {
+        let answer = [];
+        let curpos = 0;
+        let set = new Set();
+        s.split("").forEach((item, idx) => {
+          if (item === t) set.add(idx);
+        });
+        console.log(set);
+        for (let i = 0; i < s.length; i++) {
+          let min = Number.MAX_SAFE_INTEGER;
+          for (let x of set) {
+            min = Math.min(min, Math.abs(x - i));
+          }
+          answer.push(min);
+        }
+        return answer;
+      }
+
+      let str = "teachermode";
+      console.log(solution(str, "e"));
+    </script>
+  </body>
+</html>
