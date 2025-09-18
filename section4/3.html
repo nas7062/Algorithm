@@ -10,14 +10,24 @@
         let n = test[0].length;
         let m = test.length;
         let result = [];
-        for (let i = 0; i < m; i++) {
-          for (let j = 0; j < n - 1; j++) {
-            for (let k = j + 1; k < n; k++) {
-              result.push({ mento: test[j], menti: test[k] });
+        for (let i = 1; i <= n; i++) {
+          for (let j = 1; j <= n; j++) {
+            let cnt = 0;
+            if (i !== j) {
+              for (let k = 0; k < m; k++) {
+                let pi = 0;
+                let pj = 0;
+                for (let s = 0; s < n; s++) {
+                  if (test[k][s] === i) pi = s;
+                  if (test[k][s] === j) pj = s;
+                }
+                if (pi < pj) cnt++;
+              }
+              if (cnt === m) answer++;
             }
           }
         }
-        console.log(result);
+
         return answer;
       }
 
