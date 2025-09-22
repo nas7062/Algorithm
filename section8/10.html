@@ -17,7 +17,7 @@
             for (let i = 0; i < n; i++) {
               if (check[i] === 0) {
                 check[i] = 1;
-                tmp[L] = i;
+                tmp[L] = arr[i];
                 DFS(L + 1);
                 check[i] = 0;
               }
